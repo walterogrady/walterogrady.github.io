@@ -1,51 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:100">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Work Sans", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
 
-  <head>
+/* Create a Parallax Effect */
+.bgimg-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-color: darkblue;
+    min-height: 100%;
+}
 
-    <title>Walter O'Grady</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+.w3-hover-opacity {cursor: pointer;}
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
 
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <h3 class="w3-text-white w3-padding-large">Walter O'Grady</h3>
+  </div>
 
-  </head>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  </div>
+</div>
 
-  <body>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle" style="width: 100%; height: 100%; opacity: 0.85; background-image: url('img/JustStart.jpg'); background-size: cover; background-position: bottom"></div>
+  <div class="w3-display-middle" style="text-align: center;">
+    <div class="w3-center w3-xxxlarge w3-wide w3-animate-opacity w3-text-white">Tech Ideas into Tech Reality</div>
+    <div class="w3-center w3-large w3-wide w3-animate-opacity w3-text-white" style="max-width: 90%; display: inline-block;">I Specialise in Apps and Websites for Technical R&amp;D Projects</div>
+    <div>
+    <p></p><a href="mailto:walter@walterogrady.com?Subject=Contact&Body=Hello%20Walter,%0D%0A%0D%0AI'd%20like%20to%20get%20in%20contact%20to%20discuss%20my%20project.%0D%0A%0D%0ARegards,%0D%0A" class="w3-button w3-border w3-border-white w3-round-xlarge w3-text-white">Contact</a>
+  </div>
+  </div>
+    
+  
+</div>
 
-    <!-- Header -->
-    <header id="top" class="header">
-    </header>
-
-    <!-- About -->
-    <section id="about" class="about">
-      <div class="container text-center">
-        <p><a href="mailto:walter@walterogrady.com" target="_top" style="color:antiquewhite">Walter@WalterOGrady.com</a></p>
-      </div>
-      <!-- /.container -->
-    </section>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/stylish-portfolio.js"></script>
-
-  </body>
-
+</body>
 </html>
+
